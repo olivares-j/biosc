@@ -81,16 +81,16 @@ model.plot_trace(var_names=['age', 'distance'])
 
 # Example: Plot posterior predictive checks
 fig, axs = plt.subplots(1, 3, figsize=(10, 5))
-az.plot_ppc(model3.idata, var_names = 'parallax', ax = axs[0])
-az.plot_ppc(model3.idata, var_names = 'flux', ax = axs[1])
-az.plot_ppc(model3.idata, var_names = 'Li', ax = axs[2])
+az.plot_ppc(model.idata, var_names = 'parallax', ax = axs[0])
+az.plot_ppc(model.idata, var_names = 'flux', ax = axs[1])
+az.plot_ppc(model.idata, var_names = 'Li', ax = axs[2])
 plt.show()
 
 # Example: Plot QQ for parallax
 fig, ax = plt.subplots(figsize=(5, 5))
 ax.set_ylabel('observed parallax [mas]')
 ax.set_xlabel('parallax [mas]')
-model3.plot_QQ('parallax', fig, ax)
+model.plot_QQ('parallax', fig, ax)
 plt.show()
 ```
 
