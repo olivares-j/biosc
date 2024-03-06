@@ -1,4 +1,4 @@
-from biosc.preprocessing import Preproccesing
+from biosc.preprocessing import Preprocesing
 from biosc.bhm import BayesianModel
 import os
 import logging
@@ -17,7 +17,7 @@ def main():
     configure_logging()
 
     # Data preprocessing
-    prep = Preproccesing('Pleiades_GDR3+2MASS+PanSTARRS1+EW_Li.csv', sortPho=False)
+    prep = Preprocesing('Pleiades_GDR3+2MASS+PanSTARRS1+EW_Li.csv', sortPho=False)
     parallax_data = prep.get_parallax()
     Li_data = prep.get_Li()
     m_data = prep.get_magnitude(fillna='max')
